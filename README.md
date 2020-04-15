@@ -21,8 +21,8 @@ Example:
 ```stylus
 #        $1                              $2                                 $3
 # Copy my local stuff to my second internal drive (mounted at '/opt/backup') for quick backups
-do_rsync "/home/sepulzera/Documents/"    "/opt/backup"                      "sepulzera/Documents/"
-do_rsync "/home/sepulzera/Pictures/"     "/opt/backup"                      "sepulzera/Pictures/"
+do_rsync "/home/sepulzera/Documents/"    "/opt/backup"                      "/sepulzera/Documents/"
+do_rsync "/home/sepulzera/Pictures/"     "/opt/backup"                      "/sepulzera/Pictures/"
 
 # Copy all backup'ed stuff from my second internal drive to my external drive
 do_rsync "/opt/backup/"                  "/media/sepulzera/BackupDrive1"    "/backup/"
@@ -47,7 +47,7 @@ At its core, this script only implements copying data from and to locally connec
 * Copying data over ssh. (The script would need be to extended to provide this functionality.)
 * Copying data from or to NAS. (May work if mounted into the FS, but untested.)
 
-Copying data from or to encrypted drives should work, provided that the drive is mounted and unlocked.
+Copying data from or to encrypted drives works, as long as that the drive is mounted and unlocked.
 
 ## Diving deeper into rsync
 
